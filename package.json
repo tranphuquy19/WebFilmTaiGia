@@ -13,6 +13,7 @@
     "filesize": "^6.0.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
+    "imdb-node-api": "^1.1.0",
     "morgan": "~1.9.1"
   }
 }

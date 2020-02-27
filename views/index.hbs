@@ -1,4 +1,44 @@
+<p>Có <b>{{total}}</b> trong hệ thống</p>
 {{#each files}}
-<a href="{{name}}">{{name}} [{{filesize}}]</a>
-<br>
+{{!-- <div class="card col-md-11 m-3 bg-light">
+    <img class="card-img-top" style="width:fit-content" id="I{{nameURI}}" src="" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title filmName">{{name}}</h5>
+        <p class="card-text" id="{{nameURI}}"></p>
+        <p class="card-text">{{filesize}}</p>
+        <a href="/download?name={{filename}}" class="btn btn-primary">Xem</a>
+    </div>
+</div> --}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img id="I{{nameURI}}" src="https://pbs.twimg.com/profile_images/601841063704289281/3uNwI6tO_400x400.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title filmName">{{name}}</h4>
+                        <p class="card-text" id="{{nameURI}}"></p>
+                        <p class="card-text">{{filesize}}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="/download?name={{filename}}" type="button"
+                                class="btn btn-outline-success btn-lg btn-block5">Xem</a>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" name="filmLink" id="T{{nameURI}}" value="/download?name={{filename}}">
+                        </div>
+                        <div-col-md-3>
+                            <button class="btn btn-outline-success" onclick="copy('T{{nameURI}}')">Copy To Clipboard</button>
+                        </div-col-md-3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{/each}}
